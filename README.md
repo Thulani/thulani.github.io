@@ -1,6 +1,6 @@
 # Thulani Hlongwane's Personal Website
 
-Website with a brief account of a Thulani's education, qualifications and work experience.
+Website with a brief account of Thulani's education, qualifications and work experience.
 
 ## Built with
 
