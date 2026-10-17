@@ -1,25 +1,24 @@
-# Thulani Hlongwane's Personal Website
+# Thulani Hlongwane: personal site
 
-Website with a brief account of Thulani's education, qualifications and work experience.
+Source for [www.thulanihlongwane.co.za](https://www.thulanihlongwane.co.za/), my online CV: experience, skills, education and how to get in touch.
 
 ## Built with
 
-* [HTML 5](https://en.wikipedia.org/wiki/HTML) - Standard markup language for documents designed to be displayed in a web browser
+Plain HTML, CSS and a little vanilla JavaScript. There are no frameworks, no build step and no dependencies, and the site is hosted on GitHub Pages.
 
-* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Style sheet language used for describing the presentation of a document written in HTML
+- Responsive from phone to desktop, with automatic and manual dark mode
+- Accessible markup: semantic landmarks, skip link, keyboard focus styles, reduced-motion support
+- SEO: meta description, Open Graph tags and schema.org `Person` structured data
+- Print stylesheet, so the page can be printed or saved as a one-to-two page PDF CV
 
-* [Javascript](https://en.wikipedia.org/wiki/JavaScript) - High-level, interpreted scripting language conforming to the ECMAScript specification
+## Run locally
 
-* [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS
+Open `index.html` in a browser, or serve the folder:
 
-* [JQuery](https://jquery.com/) - JavaScript library designed to simplify HTML DOM tree manipulation, as well as event handling, CSS animation, and Ajax
-
-* [Font Awesome](https://fontawesome.com/) - Font and icon toolkit based on CSS and LESS
+```bash
+python3 -m http.server 8000   # then visit http://localhost:8000
+```
 
 ## Author
 
 [Thulani Hlongwane](https://www.linkedin.com/in/thulani-hlongwane-67056a1a/)
-
-## License
-
-Thia project is not licensed
