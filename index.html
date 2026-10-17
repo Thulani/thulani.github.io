@@ -1,440 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Thulani Hlongwane's personal website">
-    <meta name="author" content="Thulani Hlongwane">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thulani Hlongwane · Senior Software Engineer (Java, Spring Boot, Angular)</title>
+  <meta name="description" content="Thulani Hlongwane is a Johannesburg-based senior software engineer with 20 years of experience building Java, Spring Boot, Angular and Python systems for banking, insurance and telecoms. Available for roles and contract work.">
+  <meta name="author" content="Thulani Hlongwane">
+  <link rel="canonical" href="https://www.thulanihlongwane.co.za/">
+  <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
 
-    <title>Thulani Hlongwane</title>
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://www.thulanihlongwane.co.za/">
+  <meta property="og:title" content="Thulani Hlongwane · Senior Software Engineer">
+  <meta property="og:description" content="20 years building Java, Spring Boot, Angular and Python systems for banking, insurance and telecoms. Available for roles and contract work.">
+  <meta property="og:image" content="https://www.thulanihlongwane.co.za/img/thulani.jpg">
+  <meta property="profile:first_name" content="Thulani">
+  <meta property="profile:last_name" content="Hlongwane">
+  <meta name="twitter:card" content="summary">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/thulani.jpg">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+  <script>
+    // Apply a saved theme before first paint to avoid a flash.
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thulani Hlongwane",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://www.thulanihlongwane.co.za/",
+    "image": "https://www.thulanihlongwane.co.za/img/thulani.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Johannesburg", "addressCountry": "ZA" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Tshwane University of Technology" },
+    "knowsAbout": ["Java", "Spring Boot", "Angular", "Python", "Microsoft Azure", "CI/CD", "Software architecture"],
+    "sameAs": [
+      "https://www.linkedin.com/in/thulani-hlongwane-67056a1a/",
+      "https://github.com/Thulani"
+    ]
+  }
+  </script>
+  <script src="js/main.js" defer></script>
 </head>
 
-<body id="page-top">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Thulani Hlongwane</span>
-        <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/thulani.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#training">Training</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Thulani Hlongwane, back to top">TH</a>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+      </button>
     </div>
-</nav>
+  </header>
 
-<div class="container-fluid p-0">
+  <main id="main">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-        <div class="w-100">
-            <h1 class="mb-0">Thulani
-                <span class="text-primary">Hlongwane</span>
-            </h1>
-            <div class="subheading mb-5">· Johannesburg North ·
-                <a href="mailto:name@email.com">thulanih at gmail dot com</a> · +27 72 332 2415
-            </div>
-            <p>
-                <strong>Age:</strong> 39 &nbsp; | &nbsp; <strong>Gender:</strong> Male &nbsp; | &nbsp; <strong>Nationality:</strong> South African
-            </p><br/>
-            <p class="lead mb-5">I am a senior Java Developer with over 20 years experience. I like creating and taking
-                things apart in order to understand how they work. I studied towards a degree in Computer Systems
-                Engineering to understand how computers work and ended up discovering my passion in developing Angular/Java/Python
-                applications and recently have taken an interest in understanding Machine Learning and how it will
-                shape our future. My career goal is to develop and grow my skills in order to become a knowledgeable software and solution
-                architect in the near future.
-            </p>
-
-            <p>
-                <a class="btn btn-lg btn-outline-secondary"
-                   href="https://www.dropbox.com/s/n86arpo5xghzeuy/Thulani%20Hlongwane%20-%20CV.pdf?dl=0">Download CV
-                </a>
-            </p><br/>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/thulani-hlongwane-67056a1a/">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/Thulani">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <img class="portrait" src="img/thulani.jpg" width="400" height="400" alt="Portrait of Thulani Hlongwane">
+        <div class="hero-text">
+          <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to senior roles &amp; contract work</p>
+          <h1>Thulani Hlongwane</h1>
+          <p class="role">Senior Software Engineer</p>
+          <p class="stack">Java · Spring Boot · Angular · Python · Azure</p>
+          <p class="location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Johannesburg, South Africa · Remote or on-site
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn" href="https://www.dropbox.com/s/n86arpo5xghzeuy/Thulani%20Hlongwane%20-%20CV.pdf?dl=0" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+              <span class="hide-sm">Download&nbsp;</span>CV
+            </a>
+            <a class="btn btn-icon" href="https://www.linkedin.com/in/thulani-hlongwane-67056a1a/" rel="noopener" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="filled"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>
+            </a>
+            <a class="btn btn-icon" href="https://github.com/Thulani" rel="noopener" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="filled"><path d="M12 .8a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .8z"/></svg>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-        <div class="w-100">
-            <h2 class="mb-5">Education</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Tshwane University of Technology</h3>
-                    <div class="subheading mb-3">BTech Degree: Computer Systems Engineering</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2007 - Dec 2008</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Tshwane University of Technology</h3>
-                    <div class="subheading mb-3">National Diploma: Computer Systems Engineering</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2003 - Dec 2005</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                <div class="resume-content">
-                    <h3 class="mb-0">St Barnabas College</h3>
-                    <div class="subheading mb-3">Matric</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 1997 - Dec 2002</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="training">
-        <div class="w-100">
-            <h2 class="mb-5">Training</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Torque IT</h3>
-                    <div class="subheading mb-3">Implementing an Azure Data Solution</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2021</span>
-                </div>
-            </div>
-            
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Pivotal Academy</h3>
-                    <div class="subheading mb-3">Pivotal Spring Training</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2018</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Jumping Bean</h3>
-                    <div class="subheading mb-3">Ubuntu Linux Training</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2015</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Van Zyl and Pritchard</h3>
-                    <div class="subheading mb-3">Java J2EE Training</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2006</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                <div class="resume-content">
-                    <h3 class="mb-0">J3B Solutions</h3>
-                    <div class="subheading mb-3">James Martin JAD Facilitation Skills</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2006</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-        <div class="w-100">
-            <h2 class="mb-5">Experience</h2>
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Senior Software Engineer</h3>
-                    <div class="subheading mb-3">Investec Bank</div>
-                    <p><strong>Projects:</strong> Oneview, RFI</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">November 2019 - Present</span>
-                </div>
-            </div>
-            
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Senior Java Developer</h3>
-                    <div class="subheading mb-3">Guruhut - Momentum (MMI Holdings)</div>
-                    <p><strong>Projects:</strong> Fastlane, Lab Services, Onboarding Api</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">May 2014 - October 2019</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Senior Java Developer</h3>
-                    <div class="subheading mb-3">Guruhut - Mobile Telecommunication Company (MTN)</div>
-                    <p><strong>Projects:</strong> MTN Active</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Dec 2011 - Apr 2014</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Intermediate Java Developer</h3>
-                    <div class="subheading mb-3">Guruhut - Rand Merchant Bank (RMB)</div>
-                    <p><strong>Projects:</strong> Karta</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Sep 2008 – Dec 2011</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Intermediate Java Developer</h3>
-                    <div class="subheading mb-3">Accenture</div>
-                    <p><strong>Projects:</strong> MTN Loaded</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Apr 2008 – Aug 2008</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Specialist Developer</h3>
-                    <div class="subheading mb-3">Transnet Freight Rail (Formerly Spoornet)</div>
-                    <p><strong>Projects:</strong> IWHSS</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2008 - Mar 2008</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Analyst Programmer</h3>
-                    <div class="subheading mb-3">Spoornet</div>
-                    <p><strong>Projects:</strong> IWHSS</p>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2007 - Dec 2007</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Bursary Intern</h3>
-                    <div class="subheading mb-3">Spoornet</div>
-                    <!-- <p>TODO</p> -->
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2006 - Dec 2006</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-        <div class="w-100">
-            <h2 class="mb-5">Skills</h2>
-
-            <div class="subheading mb-3">Programming Languages</div>
-            <ul class="list-inline dev-icons">
-                <li class="list-inline-item">
-                    <i class="fab fa-java"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-python"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-js-square"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-angular"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-vuejs"></i>
-                </li>
-            </ul>
-
-            <div class="subheading mb-3">Frameworks</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Struts ∙ Spring ∙ Springboot ∙ Play! ∙ Eclipse RCP ∙ GWT ∙ JSF
-                </li>
-            </ul>
-            <br/>
-
-            <div class="subheading mb-3">Persistance</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    SQL ∙ JPA ∙ Hibernate ∙ MyBatis ∙ Flyway ∙ Liquibase
-                </li>
-            </ul>
-            <br/>
-
-            <div class="subheading mb-3">Libraries</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Lucene ∙ Jersey ∙ Swagger
-                </li>
-            </ul>
-            <br/>
-            
-            <div class="subheading mb-3">DevOps</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Chef ∙ Gitlab CI/CD pipelines ∙ Bitbucket pipelines ∙ Github Actions
-                </li>
-            </ul>
-            <br/>
-            
-            <div class="subheading mb-3">Build Tools</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Ant ∙ Maven ∙ Gradle
-                </li>
-            </ul>
-            <br/>
-
-            <div class="subheading mb-3">Testing Tools</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    JUnit ∙ Selenium ∙ Webdriver
-                </li>
-            </ul>
-            <br/>
-
-            <div class="subheading mb-3">Reporting Tools</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Birt ∙ Jasper
-                </li>
-            </ul>
-            <br/>
-            
-            <div class="subheading mb-3">Cloud</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-check"></i>
-                    Azure
-                </li>
-            </ul>
-            <br/>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-        <div class="w-100">
-            <h2 class="mb-5">Interests</h2>
-            <p>Apart from being a software developer, I enjoy most of my time being indoors. I spend a large amount of
-                my free time exploring the latest technology advancements.</p>
-            <p class="mb-0">When forced outdoors, you'll find me either at a soccer pitch, a local resturant or on my way to an interesting travel destination. Yes, I travel, I 
-            love travelling to all different parts of our small world in the interest of seeking adverture.</p>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
-        <div class="w-100">
-            <h2 class="mb-5">Contact</h2>
-            <p>
-                <i class="fas fa-phone"></i> +27 72 332 2415
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 id="about-title">About</h2>
+        <div class="about-grid">
+          <div class="prose">
+            <p class="lead">
+              I’m a senior software engineer with <span data-years-since="2006">20</span> years of experience building
+              Java, Angular and Python applications for banking, insurance and telecoms, at organisations including
+              Investec, Momentum, MTN and Rand Merchant Bank.
             </p>
             <p>
-                <i class="fas fa-envelope"></i> thulanih at gmail dot com
+              I trained in Computer Systems Engineering because I wanted to know how computers work from the hardware up.
+              I’ve always liked taking systems apart to see how they work, and that curiosity turned into a career
+              shipping production software end to end: Spring Boot services, Angular front-ends, the data layer and the
+              CI/CD pipelines that deliver them.
             </p>
+            <p>
+              I’m now growing towards software and solution architecture, and I’m exploring machine learning and how it
+              will shape the systems we build next.
+            </p>
+            <p class="aside">
+              Away from the keyboard I keep up with new technology, play and watch football, try new restaurants
+              and travel whenever I can.
+            </p>
+          </div>
+          <dl class="facts">
+            <div><dt><span data-years-since="2006">20</span>+</dt><dd>years shipping software</dd></div>
+            <div><dt>3</dt><dd>industries: banking, insurance &amp; telecoms</dd></div>
+            <div><dt>Full-stack</dt><dd>Spring Boot back-ends, Angular front-ends</dd></div>
+          </dl>
         </div>
+      </div>
     </section>
 
-</div>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 id="experience-title">Experience</h2>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-head">
+              <h3>Senior Software Engineer</h3>
+              <p class="when">Nov 2019 – Present</p>
+            </div>
+            <p class="org">Investec Bank <span class="tag">Banking</span></p>
+            <p class="projects"><strong>Projects:</strong> Oneview, RFI</p>
+            <!-- Add 2–3 bullets here: what you built, the tech you used, and the measurable result. -->
+          </li>
 
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+          <li class="job">
+            <div class="job-head">
+              <h3>Senior Java Developer</h3>
+              <p class="when">May 2014 – Oct 2019</p>
+            </div>
+            <p class="org">Momentum (MMI Holdings) <span class="via">via Guruhut</span> <span class="tag">Insurance &amp; financial services</span></p>
+            <p class="projects"><strong>Projects:</strong> Fastlane, Lab Services, Onboarding API</p>
+          </li>
 
-<!-- Custom scripts for this template -->
-<script src="js/resume.min.js"></script>
+          <li class="job">
+            <div class="job-head">
+              <h3>Senior Java Developer</h3>
+              <p class="when">Dec 2011 – Apr 2014</p>
+            </div>
+            <p class="org">MTN <span class="via">via Guruhut</span> <span class="tag">Telecoms</span></p>
+            <p class="projects"><strong>Projects:</strong> MTN Active</p>
+          </li>
 
+          <li class="job">
+            <div class="job-head">
+              <h3>Intermediate Java Developer</h3>
+              <p class="when">Sep 2008 – Dec 2011</p>
+            </div>
+            <p class="org">Rand Merchant Bank (RMB) <span class="via">via Guruhut</span> <span class="tag">Banking</span></p>
+            <p class="projects"><strong>Projects:</strong> Karta</p>
+          </li>
+        </ol>
+
+        <h3 class="subhead">Earlier roles</h3>
+        <ul class="earlier">
+          <li><span><strong>Intermediate Java Developer</strong>, Accenture: MTN Loaded</span><span class="when">Apr – Aug 2008</span></li>
+          <li><span><strong>Specialist Developer</strong>, Transnet Freight Rail: IWHSS</span><span class="when">Jan – Mar 2008</span></li>
+          <li><span><strong>Analyst Programmer</strong>, Spoornet: IWHSS</span><span class="when">2007</span></li>
+          <li><span><strong>Bursary Intern</strong>, Spoornet</span><span class="when">2006</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li class="core">Java</li><li class="core">Python</li><li>JavaScript</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Back-end</h3>
+            <ul class="chips">
+              <li class="core">Spring Boot</li><li>Spring</li><li>Jersey (JAX-RS)</li><li>Swagger / OpenAPI</li><li>Play!</li><li>Lucene</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Front-end</h3>
+            <ul class="chips">
+              <li class="core">Angular</li><li>Vue.js</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; persistence</h3>
+            <ul class="chips">
+              <li>JPA</li><li>Hibernate</li><li>MyBatis</li><li>Flyway</li><li>Liquibase</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="chips">
+              <li class="core">Microsoft Azure</li><li>GitHub Actions</li><li>GitLab CI/CD</li><li>Bitbucket Pipelines</li><li>Chef</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Build &amp; test</h3>
+            <ul class="chips">
+              <li>Maven</li><li>Gradle</li><li>JUnit</li><li>Selenium WebDriver</li>
+            </ul>
+          </div>
+          <div class="skill-group skill-group-wide">
+            <h3>Also worked with</h3>
+            <ul class="chips chips-quiet">
+              <li>Struts</li><li>JSF</li><li>GWT</li><li>Eclipse RCP</li><li>Ant</li><li>BIRT</li><li>JasperReports</li><li>Ubuntu Linux</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <h2 id="education-title">Education &amp; training</h2>
+        <div class="two-col">
+          <div>
+            <h3 class="subhead">Education</h3>
+            <ul class="entries">
+              <li>
+                <strong>BTech, Computer Systems Engineering</strong>
+                <span>Tshwane University of Technology</span>
+                <span class="when">2007 – 2008</span>
+              </li>
+              <li>
+                <strong>National Diploma, Computer Systems Engineering</strong>
+                <span>Tshwane University of Technology</span>
+                <span class="when">2003 – 2005</span>
+              </li>
+              <li>
+                <strong>Matric</strong>
+                <span>St Barnabas College</span>
+                <span class="when">2002</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subhead">Training</h3>
+            <ul class="entries">
+              <li><strong>Implementing an Azure Data Solution</strong><span>Torque IT</span><span class="when">2021</span></li>
+              <li><strong>Spring Training</strong><span>Pivotal Academy</span><span class="when">2018</span></li>
+              <li><strong>Ubuntu Linux</strong><span>Jumping Bean</span><span class="when">2015</span></li>
+              <li><strong>Java J2EE</strong><span>Van Zyl and Pritchard</span><span class="when">2006</span></li>
+              <li><strong>JAD Facilitation Skills (James Martin)</strong><span>J3B Solutions</span><span class="when">2006</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-card">
+          <h2 id="contact-title">Let’s work together</h2>
+          <p>
+            I’m available for senior engineering roles and contract projects: Java and Spring Boot back-ends,
+            Angular front-ends, Azure, and the CI/CD that ties it all together. Tell me what you’re building.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" data-email-user="thulanih" data-email-domain="gmail.com" href="#contact">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+              <span class="js-email-text">Email me</span>
+            </a>
+            <a class="btn" href="tel:+27723322415">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 0 0 6.5 6.5L16 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+              +27 72 332 2415
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/thulani-hlongwane-67056a1a/" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="filled"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+          <noscript><p class="small">Email: thulanih at gmail dot com</p></noscript>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span class="js-year">2026</span> Thulani Hlongwane</p>
+      <button class="link-button" type="button" data-print>Print or save this page as a PDF CV</button>
+    </div>
+  </footer>
 </body>
-
 </html>

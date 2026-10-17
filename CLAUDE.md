@@ -4,26 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Thulani Hlongwane's personal résumé site, a static single page served by GitHub Pages at the custom domain in `CNAME` (`www.thulanihlongwane.co.za`). It is built on the Start Bootstrap "Resume" template v5.0.7 (Bootstrap 4, jQuery, Font Awesome 5). That is why `package.json` and the CSS/JS banners still name Start Bootstrap. There is no server-side code, and Pages serves the repo root as-is. Anything committed to `master` goes live, including `vendor/`, `css/*.min.css` and `js/*.min.js`.
+Thulani Hlongwane's personal CV site: a static single page served by GitHub Pages from the repo root at the custom domain in `CNAME` (`www.thulanihlongwane.co.za`). It has no build step, no package manager and no dependencies. Anything committed to `master` goes live as-is.
 
 ## Commands
 
 ```bash
-npm install          # install gulp toolchain + front-end deps
-npx gulp             # default = build: wipe & repopulate vendor/, compile SCSS, minify JS
-npx gulp css         # scss/ -> css/resume.css + css/resume.min.css
-npx gulp js          # js/resume.js -> js/resume.min.js
-npm start            # build, then watch + BrowserSync dev server on http://localhost:3000
+python3 -m http.server 8000   # preview at http://localhost:8000 (or just open index.html)
 ```
 
-There are no tests or linters. `.travis.yml` runs `npm test`, but `package.json` defines no `test` script.
-
-The toolchain dates from 2019 (gulp 4, `gulp-sass` 4 with `node-sass`). `npm install` is likely to fail on current Node because `node-sass` won't build there. When a change is small and npm won't install, you can edit the source and the matching built file directly, but keep them in sync.
+There are no tests, linters or CI. To check visual changes, screenshot the page at desktop (1280px) and phone (390px) widths, in both light and dark color schemes, plus print media. Playwright with the Chromium at `/opt/pw-browsers/chromium` works for this.
 
 ## Architecture
 
-- **`index.html`**: all of the content. A fixed left `#sideNav` holds the nav links. Each `<section class="resume-section" id="...">` (about, education, training, experience, skills, interests, contact) needs a matching `<a class="nav-link js-scroll-trigger" href="#id">` in the nav. Entries in education, training and experience use the `.resume-item > .resume-content + .resume-date` pattern, and sections are separated by `<hr class="m-0">`.
-- **Styles**: edit the source in `scss/`, never `css/` directly. `resume.scss` imports the partials (`_variables`, `_mixins`, `_global`, `_nav`, `_resume-item`, `_bootstrap-overrides`). The theme color is `$primary: $orange` (`#BD5D38`) and the sidebar width is `$sidebar-base-width` in `_variables.scss`. The page loads only `css/resume.min.css`, so rebuild after any SCSS change.
-- **Scripts**: `js/resume.js` handles jQuery-easing smooth scroll, collapses the mobile menu on click, and runs Bootstrap scrollspy on `#sideNav`. The page loads `js/resume.min.js`, so regenerate it after edits.
-- **`vendor/`**: third-party assets copied out of `node_modules` by the gulp `vendor` task. `gulp build` deletes and recreates it, so don't hand-edit it. It is committed because Pages has no build step.
-- **Fonts**: Saira Extra Condensed and Muli load from Google Fonts in `<head>`.
+- **`index.html`**: all content. Sections (`#top` hero, `#about`, `#experience`, `#skills`, `#education`, `#contact`) each need a matching link in `.site-nav`, and `js/main.js` highlights the link for the section in view. The schema.org `Person` JSON-LD and the Open Graph tags in `<head>` repeat the job title, links and skills, so keep them in sync with the body.
+- **Experience**: recent roles are `.job` cards in `ol.timeline`, and older roles are one-liners in `ul.earlier`. To add an achievement bullet, put a `<ul><li>…</li></ul>` inside a `.job` (already styled).
+- **Skills**: chips are grouped in `.skill-group` cards. Adding `class="core"` to a chip highlights it as a headline skill.
+- **`css/style.css`**: hand-written, token-based. Colors are CSS custom properties on `:root`, redefined for dark mode both under `@media (prefers-color-scheme: dark)` (guarded by `:root:not([data-theme="light"])`) and under `:root[data-theme="dark"]`, so change both dark blocks together. The `@media print` block at the bottom turns the page into a PDF CV. It hard-codes the email, phone and LinkedIn URL in `.location::after`, so update it if those change.
+- **`js/main.js`**: handles the theme toggle (saved in `localStorage`, with an inline script in `<head>` that applies it before paint), builds the email link from `data-email-user` and `data-email-domain` (the address is never written out in the HTML, to deter scrapers), fills `[data-years-since]` and `.js-year` with values computed from the current year, and runs the print button and the active-nav observer.
